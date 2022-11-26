@@ -127,17 +127,17 @@ def begin(numPlayers : int):
         cardsSelected = 0
 
         while True:
-            # event, values = calculatorWindow.read()
+            event, values = calculatorWindow.read()
 
             # DEBUGGING ONLY
-            for i in range(deckSize):
-                calculator.addCard(playerNum, getCardFromEvent(list(eventToCardDict.keys())[random.randint(0, 11)]))
-                cardsSelected += 1
-            else:
-                break
+            # for i in range(deckSize):
+            #     calculator.addCard(playerNum, getCardFromEvent(list(eventToCardDict.keys())[random.randint(0, 11)]))
+            #     cardsSelected += 1
+            # else:
+            #     break
 
             if isCardEvent(event):
-                # calculator.addCard(playerNum, getCardFromEvent(event))
+                calculator.addCard(playerNum, getCardFromEvent(event))
 
                 if cardsSelected >= deckSize:
                     break
